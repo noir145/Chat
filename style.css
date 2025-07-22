@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    background-color: #F5EBFA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container principal do chat */
+.chat-container {
+    width: 100%;
+    max-width: 1280px;
+    height: 90vh;
+    background-color: white;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Cabeçalho do chat */
+.chat-header {
+    background-color: #6E3482;
+    color: white;
+    padding: 16px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Área de mensagens */
+.chat-box {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+    background-color: #F5EBFA;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo das mensagens */
+.message {
+    max-width: 80%;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    border-radius: 20px;
+    font-size: 0.95em;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+/* Mensagens do usuário */
+.user {
+    align-self: flex-end;
+    background-color: #A56ABD;
+    color: white;
+    border-bottom-right-radius: 0;
+}
+
+/* Mensagens do bot */
+.bot {
+    align-self: flex-start;
+    background-color: #E7DBEF;
+    color: #49225B;
+    border-bottom-left-radius: 0;
+}
+
+/* Área de entrada */
+.input-area {
+    display: flex;
+    padding: 12px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+
+/* Campo de texto */
+.input-area input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 1em;
+    outline: none;
+    margin-right: 10px;
+}
+
+/* Botão de envio */
+.input-area button {
+    background-color: #6E3482;
+    border: none;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-area button:hover {
+    background-color: #49225B;
+}
+
+/* Scroll da caixa de mensagens */
+.chat-box::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background-color: #d4bce2;
+    border-radius: 4px;
+}
