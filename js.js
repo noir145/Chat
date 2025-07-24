@@ -14,21 +14,22 @@ const conversationFlow = [
     },
     {
         bot: "Eu não ativei isso. E por que foi cobrado? Nunca usei esse serviço.",
-        options: ["O AD pode ser ativado automaticamente quando você tenta pagar algo sem saldo ou limite. A tarifa de R$ 59,90 é aplicada nesse caso.", "O AD pode ser ativado automaticamente quando você tenta pagar algo sem saldo ou limite.", ""]
+        options: ["O AD pode ser ativado automaticamente quando você tenta pagar algo sem saldo ou limite. A tarifa de R$ 59,90 é aplicada nesse caso.", "O AD pode ser ativado automaticamente quando você tenta pagar algo sem saldo ou limite.", "O Adiantamento a Depositante é acionado automaticamente quando você tenta concluir uma transação sem saldo disponível ou limite no cheque especial."]
     },
     {
         bot: "É cobrado todo mês? Como evito isso? Tem como cancelar?",
-        options: ["Essa cobrança só acontece se o valor adiantado não for devolvido no mesmo dia. É possível desativar esse serviço."]
+        options: ["Essa cobrança só acontece se o valor adiantado não for devolvido no mesmo dia. É possível desativar esse serviço.", "Essa tarifa só é cobrada quando o valor adiantado não é coberto até o fim do mesmo dia. Se preferir eu posso fazer o cancelamento.", "A cobrança acontece apenas se o valor usado no adiantamento não for devolvido no mesmo dia. Caso não queira utilizar esse recurso, é possível cancelá-lo"]
     },
     {
         bot: "Nossa… e tem mais algum custo além dos R$ 59,90?",
-        options: ["Pode haver sim. Além da tarifa, se o valor continuar em aberto, são cobrados: Juros proporcionais ao tempo de utilização, E o IOF, que é um imposto federal sobre operações financeiras.", "são cobrados: Juros proporcionais ao tempo de utilização, E o IOF, que é um imposto federal sobre operações financeiras."]
+        options: ["Pode haver sim. Além da tarifa, se o valor continuar em aberto, são cobrados: Juros proporcionais ao tempo de utilização, E o IOF", "São cobrados: Juros proporcionais ao tempo de utilização, E o IOF", "Juros proporcionais ao tempo de utilização, E o IOF"]
     },
     {
         bot: "Entendi. Posso cancelar esse serviço?",
         options: ["Claro! vou fazer o cancelamento do serviço", "Sim viu realizar o cancelamento agora mesmo."]
     },
     {
+        bot: "muito obrigada!",
         options: ["Ainda tem algo em que eu possa ajudar?", "Ainda há alguma coisa em que eu possa ajudar?", "Diante das informações, lhe resta alguma dúvida?"]
     },
     {
@@ -42,7 +43,7 @@ function createMessageElement(sender, text) {
 
     const name = document.createElement("span");
     name.className = "name";
-    name.textContent = sender === "user" ? "Você" : "Guilherme (Itaú)";
+    name.textContent = sender === "user" ? "Atendente" : "Francielly";
     wrapper.appendChild(name);
 
     const content = document.createElement("div");
