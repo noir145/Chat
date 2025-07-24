@@ -26,7 +26,7 @@ const conversationFlow = [
     },
     {
         bot: "Entendi. Posso cancelar esse serviço?",
-        options: ["Claro! vou fazer o cancelamento do serviço", "Sim viu realizar o cancelamento agora mesmo."]
+        options: ["Claro! vou fazer o cancelamento do serviço", "Sim vou realizar o cancelamento agora mesmo."]
     },
     {
         bot: "muito obrigada!",
